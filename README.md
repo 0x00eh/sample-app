@@ -1,5 +1,14 @@
 # Flask Fargate App Deployment
 
+# To run this app in your AWS account. follow the below steps.
+  - Clone this repo to your local machine
+  - Downlaod terraform (2 min youtube guide): [https://www.youtube.com/watch?v=9irfjbEzDz4]
+  - Download aws cli and configure aws in your machine.
+  - In github secret keys add ```AWS_ACCOUNT_ID```, ```AWS_ACCESS_KEY_ID``` and ```AWS_SECRET_ACCESS_KEY``` (*Node*:Make sure user has proper permission in AWs IAM)
+  - In the cloned repo change the directory to infra2/ and run ```terraform init```, ```terraform plan```, and ```terraform apply```.
+  - Run the github workflow from github Actions.
+
+
 ## Overview
 This repository contains a tiny Flask app deployed on AWS ECS Fargate with HTTP/HTTPS, auto-scaling, and CI/CD pipeline.
 
@@ -67,3 +76,5 @@ flowchart TD
 
 
     https://domain.com/login
+```
+
