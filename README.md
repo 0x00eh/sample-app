@@ -13,7 +13,7 @@ This repository contains a tiny Flask app deployed on AWS ECS Fargate with HTTP/
 - CI/CD pipeline via GitHub Actions.
 
 ## Architecture
-```mermaid
+```bash
 flowchart TD
   subgraph VPC["VPC (10.0.0.0/16)"]
     IGW["Internet Gateway"]
@@ -64,5 +64,6 @@ flowchart TD
     Via ALB DNS name: http://flask-alb-xxxxx.us-east-1.elb.amazonaws.com/login
 
     Or your custom domain (if Route53 + ACM are configured):
+
 
     https://domain.com/login
