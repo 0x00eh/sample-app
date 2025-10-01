@@ -1,0 +1,14 @@
+# Using official Python image
+FROM python:3.11-slim
+# Setting working directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+# Copying application into container
+COPY . .    
+# Expose Flask default port
+EXPOSE 5000
+# Use Gunicorn to run Flask
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
